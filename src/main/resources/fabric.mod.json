@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "superfishingrod",
+	"version": "${version}",
+	"name": "SuperFishingRod",
+	"description": "Everything!",
+	"authors": [
+		"UNK_114514",
+		"GunMu/棍母"
+	],
+	"contact": {
+		"homepage": "https://www.bilibili.com/video/BV1GJ411x7h7",
+		"sources": "https://www.bilibili.com/video/BV1GJ411x7h7"
+	},
+	"license": "GPLv3",
+	"icon": "assets/superfishingrod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.unk.superfishingrod.SuperFishingRod"
+		],
+		"fabric-datagen": [
+			"com.unk.superfishingrod.SuperFishingRodDataGenerator"
+		]
+	},
+	"mixins": [
+		"superfishingrod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.2",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"accessWidener": "superfishingrod.accesswidener"
+}

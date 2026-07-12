@@ -1,0 +1,7 @@
+accessWidener v2 official
+
+accessible method net/minecraft/world/entity/projectile/FishingHook shouldStopFishing (Lnet/minecraft/world/entity/player/Player;)Z
+accessible field net/minecraft/world/entity/projectile/FishingHook nibble I
+accessible field net/minecraft/world/entity/projectile/FishingHook hookedIn Lnet/minecraft/world/entity/Entity;
+accessible method net/minecraft/world/entity/projectile/FishingHook pullEntity (Lnet/minecraft/world/entity/Entity;)V
+accessible field net/minecraft/world/entity/projectile/FishingHook luck I
