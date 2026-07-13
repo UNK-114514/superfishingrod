@@ -6,6 +6,8 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.boss.enderdragon.EnderDragon;
+import net.minecraft.world.entity.boss.wither.WitherBoss;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.FishingHook;
@@ -43,7 +45,7 @@ public class SuperFishingHookEntity extends FishingHook {
 
                 boolean spawned = false;
 
-                if (random.nextDouble() <= 0.7) {
+                if (random.nextDouble() <= 0.85) {
                     for (int attempt = 0; attempt < 20; attempt++) {
                         var optional = BuiltInRegistries.ITEM.getRandom(random);
                         if (optional.isEmpty()) continue;
@@ -73,6 +75,7 @@ public class SuperFishingHookEntity extends FishingHook {
                         EntityType<?> type = optional.get().value();
                         Entity entity = type.create(level, EntitySpawnReason.NATURAL);
                         if (!(entity instanceof Mob mob)) continue;
+                        if (mob instanceof EnderDragon || mob instanceof WitherBoss) continue;
 
                         mob.setPos(this.getX(), this.getY(), this.getZ());
                         mob.finalizeSpawn((ServerLevel) level, ((ServerLevel) level).getCurrentDifficultyAt(mob.blockPosition()),
