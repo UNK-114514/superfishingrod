@@ -13,12 +13,12 @@ import org.jetbrains.annotations.NotNull;
 public class ModEntityTypes {
     public static final EntityType<@NotNull SuperFishingHookEntity> SUPER_FISHING_HOOK = Registry.register(
             BuiltInRegistries.ENTITY_TYPE,
-            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.tryBuild(SuperFishingRod.MOD_ID, "super_fishing_hook")),
+            ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(SuperFishingRod.MOD_ID, "super_fishing_hook")),
             EntityType.Builder.<SuperFishingHookEntity>of(SuperFishingHookEntity::new, MobCategory.MISC)
                     .sized(0.25F, 0.25F)
                     .clientTrackingRange(4)
                     .updateInterval(5)
-                    .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.tryBuild(SuperFishingRod.MOD_ID, "super_fishing_hook")))
+                    .build(ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(SuperFishingRod.MOD_ID, "super_fishing_hook")))
     );
 
     public static void initialize() {
